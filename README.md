@@ -1,5 +1,5 @@
 # maze generator
-This is an implementation of [maze generation algorithm](https://en.wikipedia.org/wiki/Maze_generation_algorithm) in Unity which I made for fun.
+This is an implementation of [maze generation algorithm](https://en.wikipedia.org/wiki/Maze_generation_algorithm) in Unity which I made for fun (huge thanks for [Daniel Shiffman](https://github.com/shiffman) for showing me that such things exist)
 
 This project and it's assets are far (but close enough) from perfect, but it works so 🤷‍♂️.
 
