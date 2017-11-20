@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class MazeGenerator : MonoBehaviour {
 
-    public int size = 10; 
+    public int size = 10;
+    public float scale = 1f; // size of the floor cell in units, by default 1 to match the prefabs
     public GameObject floor;
     public GameObject wall;
 
@@ -117,7 +118,7 @@ public class MazeGenerator : MonoBehaviour {
 
         for (int x = 0; x < size; x++) {
             for (int y = 0; y < size; y++) {
-                grid[x, y] = new Cell(new Vector3(x, 0f, -y));
+                grid[x, y] = new Cell(new Vector3(x * scale, 0f, -y * scale));
             }
         }
     }
@@ -125,8 +126,8 @@ public class MazeGenerator : MonoBehaviour {
     void SetCells () {
         // offsets of the walls, because otherwise they would be instantiated
         // in the center of the cell
-        Vector3 xoff = new Vector3(0.5f, 0.5f, 0f);
-        Vector3 zoff = new Vector3(0f, 0.5f, 0.5f);
+        Vector3 xoff = new Vector3(0.5f, 0.5f, 0f) * scale;
+        Vector3 zoff = new Vector3(0f, 0.5f, 0.5f) * scale;
 
         for (int x = 0; x < size; x++) {
             for (int y = 0; y < size; y++) {
